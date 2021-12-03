@@ -29,49 +29,49 @@ namespace WinAnim
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAW_BLEND = new System.Windows.Forms.Button();
+            this.btnHOR_AW_SLIDE = new System.Windows.Forms.Button();
+            this.btnCenter_AW_SLIDE = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAW_BLEND
             // 
-            this.button1.Location = new System.Drawing.Point(30, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(232, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Проявление";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAW_BLEND.Location = new System.Drawing.Point(30, 62);
+            this.btnAW_BLEND.Name = "btnAW_BLEND";
+            this.btnAW_BLEND.Size = new System.Drawing.Size(232, 23);
+            this.btnAW_BLEND.TabIndex = 0;
+            this.btnAW_BLEND.Text = "Проявление";
+            this.btnAW_BLEND.UseVisualStyleBackColor = true;
+            this.btnAW_BLEND.Click += new System.EventHandler(this.btnAW_BLEND_Click);
             // 
-            // button2
+            // btnHOR_AW_SLIDE
             // 
-            this.button2.Location = new System.Drawing.Point(30, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(232, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Горизонтальное появление";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnHOR_AW_SLIDE.Location = new System.Drawing.Point(30, 118);
+            this.btnHOR_AW_SLIDE.Name = "btnHOR_AW_SLIDE";
+            this.btnHOR_AW_SLIDE.Size = new System.Drawing.Size(232, 23);
+            this.btnHOR_AW_SLIDE.TabIndex = 1;
+            this.btnHOR_AW_SLIDE.Text = "Горизонтальное появление";
+            this.btnHOR_AW_SLIDE.UseVisualStyleBackColor = true;
+            this.btnHOR_AW_SLIDE.Click += new System.EventHandler(this.btnHOR_AW_SLIDE_Click);
             // 
-            // button3
+            // btnCenter_AW_SLIDE
             // 
-            this.button3.Location = new System.Drawing.Point(30, 182);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(232, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Появление из центра";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnCenter_AW_SLIDE.Location = new System.Drawing.Point(30, 182);
+            this.btnCenter_AW_SLIDE.Name = "btnCenter_AW_SLIDE";
+            this.btnCenter_AW_SLIDE.Size = new System.Drawing.Size(232, 23);
+            this.btnCenter_AW_SLIDE.TabIndex = 2;
+            this.btnCenter_AW_SLIDE.Text = "Появление из центра";
+            this.btnCenter_AW_SLIDE.UseVisualStyleBackColor = true;
+            this.btnCenter_AW_SLIDE.Click += new System.EventHandler(this.btnCenter_AW_SLIDE_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCenter_AW_SLIDE);
+            this.Controls.Add(this.btnHOR_AW_SLIDE);
+            this.Controls.Add(this.btnAW_BLEND);
             this.Name = "Form1";
             this.Text = "Анимация формы";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -81,9 +81,9 @@ namespace WinAnim
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAW_BLEND;
+        private System.Windows.Forms.Button btnHOR_AW_SLIDE;
+        private System.Windows.Forms.Button btnCenter_AW_SLIDE;
     }
 }
 

@@ -70,8 +70,6 @@ namespace WinAnim
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
             private void btnAW_BLEND_Click(object sender, EventArgs e)
             {
                 this.Hide();
@@ -81,10 +79,8 @@ namespace WinAnim
                 this.btnCenter_AW_SLIDE.Invalidate();
             }
 
-        }
+        
 
-        private void button2_Click(object sender, EventArgs e)
-        {
             private void btnHOR_AW_SLIDE_Click(object sender, EventArgs e)
             {
                 this.Hide();
@@ -94,10 +90,9 @@ namespace WinAnim
                 this.btnCenter_AW_SLIDE.Invalidate();
             }
 
-        }
+  
 
-        private void button3_Click(object sender, EventArgs e)
-        {
+ 
             private void btnCenter_AW_SLIDE_Click(object sender, EventArgs e)
             {
                 this.Hide();
@@ -107,6 +102,6 @@ namespace WinAnim
                 this.btnCenter_AW_SLIDE.Invalidate();
             }
 
-        }
+        
     }
 }
