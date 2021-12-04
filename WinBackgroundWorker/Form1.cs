@@ -16,5 +16,15 @@ namespace WinBackgroundWorker
         {
             InitializeComponent();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Поле должно содержать цифры");
+            }
+
+        }
     }
 }
