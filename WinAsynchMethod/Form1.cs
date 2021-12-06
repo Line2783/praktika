@@ -35,8 +35,23 @@ namespace WinAsynchMethod
 
         private void btnRun_Click(object sender, EventArgs e)
         {
+            int a, b;
+        try
+            {
+                //преобразование типов данных.
+                a = Int32.Parse(txbA.Text);
+                b = Int32.Parse(txbB.Text);
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("При выполнении преобразования типов возникоа ошибка");
+                txbA.Text = txbB.Text = "";
+                return;
+            }
             AsyncSumm summdelegate = new AsyncSumm(Summ);
-            AsyncCallback cb = new AsyncCallback(CallBackMethod);
+            AsyncCallback cb = new 
+                AsyncCallback(CallBackMethod);
+            summdelegate.BeginInvoke(a, b, cb, summdelegate);
 
 
         }
