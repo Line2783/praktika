@@ -12,6 +12,7 @@ namespace WinAsynchDelegate
 {
     public partial class Form1 : Form
     {
+        private delegate void TimeConsumingMethodDelegate(int seconds);
         public Form1()
         {
             InitializeComponent();
@@ -35,10 +36,12 @@ namespace WinAsynchDelegate
         private void TimeConsumingMethod(int seconds)
         {
             for (int j = 1; j <= seconds; j++)
+            {
                 System.Threading.Thread.Sleep(1000);
-            SetProgress((int)(j * 100) / seconds);
-            if (Cancel)
-                break;
+                SetProgress((int)(j * 1000) / seconds);
+                if (Cancel)
+                    break;
+            }
             if (Cancel)
             {
                 System.Windows.Forms.MessageBox.Show("Cancelled");
@@ -49,15 +52,12 @@ namespace WinAsynchDelegate
                 System.Windows.Forms.MessageBox.Show("Complete");
             }
         }
-        private delegate void TimeConsumingMethodDelegate(int seconds);
-
         public delegate void SetProgressDelegate(int val);
-            public void SetProgress(int val)
+        public void SetProgress(int val)
         {
             if (progressBar1.InvokeRequired)
             {
-                SetProgressDelegate del = new
-                    SetProgressDelegate(SetProgress);
+                SetProgressDelegate del = new SetProgressDelegate(SetProgress);
                 this.Invoke(del, new object[] { val });
             }
             else
@@ -66,16 +66,21 @@ namespace WinAsynchDelegate
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            TimeConsumingMethodDelegate del = new
-                TimeConsumingMethodDelegate(TimeConsumingMethod);
+            TimeConsumingMethodDelegate del = new TimeConsumingMethodDelegate(TimeConsumingMethod);
             del.BeginInvoke(int.Parse(textBox1.Text), null, null);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             Cancel = true;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
