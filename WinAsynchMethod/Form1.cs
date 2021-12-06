@@ -65,6 +65,11 @@ namespace WinAsynchMethod
         {
             MessageBox.Show("Работа кипит!!!!");
         }
+
+        private void lblA_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
