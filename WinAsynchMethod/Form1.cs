@@ -14,11 +14,16 @@ namespace WinAsynchMethod
          private delegate int AsyncSumm(int a, int b);
     {
         public Form1()
-        {
-            InitializeComponent();
-        }
+    {
+        InitializeComponent();
+    }
+    private int Summ(int a, int b)
+    {
+        System.Threading.Thread.Sleep(9000);
+        return a + b;
+    }
 
-        private void Form1_Load(object sender, EventArgs e)
+    private void Form1_Load(object sender, EventArgs e)
         {
 
         }
