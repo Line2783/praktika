@@ -87,6 +87,8 @@ namespace WinAsynchMethod
             this.btnRun.TabIndex = 5;
             this.btnRun.Text = "Сумма";
             this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            this.btnRun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnRun_KeyPress);
             // 
             // btnWork
             // 
