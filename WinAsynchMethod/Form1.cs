@@ -65,6 +65,16 @@ namespace WinAsynchMethod
         {
             MessageBox.Show("Работа кипит!!!!");
         }
+
+        private void btnRun_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, helpProvider1.HelpNamespace);
+        }
     }
 }
 
