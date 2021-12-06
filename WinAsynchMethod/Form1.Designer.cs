@@ -36,6 +36,7 @@ namespace WinAsynchMethod
             this.txbB = new System.Windows.Forms.TextBox();
             this.btnRun = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // lblA
@@ -46,6 +47,7 @@ namespace WinAsynchMethod
             this.lblA.Size = new System.Drawing.Size(65, 13);
             this.lblA.TabIndex = 0;
             this.lblA.Text = "Значение А";
+            this.lblA.Click += new System.EventHandler(this.lblA_Click);
             // 
             // lblB
             // 
@@ -67,8 +69,10 @@ namespace WinAsynchMethod
             // 
             // txbA
             // 
+            this.helpProvider1.SetHelpString(this.txbA, "For input integer A");
             this.txbA.Location = new System.Drawing.Point(88, 24);
             this.txbA.Name = "txbA";
+            this.helpProvider1.SetShowHelp(this.txbA, true);
             this.txbA.Size = new System.Drawing.Size(100, 20);
             this.txbA.TabIndex = 3;
             // 
@@ -126,6 +130,7 @@ namespace WinAsynchMethod
         private System.Windows.Forms.TextBox txbB;
         private System.Windows.Forms.Button btnRun;
         private System.Windows.Forms.Button btnWork;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
 
