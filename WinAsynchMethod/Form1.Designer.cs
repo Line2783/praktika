@@ -111,6 +111,7 @@ namespace WinAsynchMethod
             this.Controls.Add(this.lblA);
             this.Name = "Form1";
             this.Text = "Асинхронный запуск";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
