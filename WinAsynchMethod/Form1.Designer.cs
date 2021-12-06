@@ -98,6 +98,7 @@ namespace WinAsynchMethod
             this.btnWork.TabIndex = 6;
             this.btnWork.Text = "Работа";
             this.btnWork.UseVisualStyleBackColor = true;
+            this.btnWork.Click += new System.EventHandler(this.btnWork_Click);
             // 
             // Form1
             // 

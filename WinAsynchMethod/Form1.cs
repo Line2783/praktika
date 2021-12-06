@@ -60,5 +60,10 @@ namespace WinAsynchMethod
             str = String.Format("Сумма введёных числе равна {0}", summdelegate.EndInvoke(ar));
             MessageBox.Show(str, "Результат операции");
         }
+
+        private void btnWork_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Работа кипит!!!");
+        }
     }
 }
