@@ -70,6 +70,11 @@ namespace WinAsynchMethod
         {
             Help.ShowHelp(this, helpProvider1.HelpNamespace);
         }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }
 
