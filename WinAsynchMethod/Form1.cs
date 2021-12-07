@@ -28,11 +28,6 @@ namespace WinAsynchMethod
 
         }
 
-        private void btnRun_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
         private void btnRun_Click(object sender, EventArgs e)
         {
             int a, b;
@@ -69,6 +64,11 @@ namespace WinAsynchMethod
         private void lblA_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, helpProvider1.HelpNamespace);
         }
     }
 }
