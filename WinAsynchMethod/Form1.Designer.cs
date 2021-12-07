@@ -107,6 +107,10 @@ namespace WinAsynchMethod
             this.btnWork.Text = "Работа";
             this.btnWork.UseVisualStyleBackColor = true;
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\Admin\\source\\repos\\praktika123101\\WinAsynchMethod\\word.docx";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
