@@ -28,11 +28,6 @@ namespace WinAsynchMethod
 
         }
 
-        private void btnRun_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
         private void btnRun_Click(object sender, EventArgs e)
         {
             int a, b;
@@ -64,6 +59,21 @@ namespace WinAsynchMethod
         private void btnWork_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Работа кипит!!!!");
+        }
+
+        private void lblA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, helpProvider1.HelpNamespace);
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }
