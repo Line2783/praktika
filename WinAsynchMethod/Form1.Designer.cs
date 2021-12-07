@@ -29,6 +29,7 @@ namespace WinAsynchMethod
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblA = new System.Windows.Forms.Label();
             this.lblB = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,6 +39,7 @@ namespace WinAsynchMethod
             this.btnWork = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.button1 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // lblA
@@ -158,6 +160,7 @@ namespace WinAsynchMethod
         private System.Windows.Forms.Button btnWork;
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
