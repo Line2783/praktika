@@ -16,5 +16,10 @@ namespace WinBD
         {
             InitializeComponent();
         }
+
+        private void oleDbConnection1_InfoMessage(object sender, System.Data.OleDb.OleDbInfoMessageEventArgs e)
+        {
+
+        }
     }
 }
