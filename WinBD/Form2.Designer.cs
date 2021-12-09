@@ -29,6 +29,7 @@ namespace WinBD
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.oleDbSelectCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
@@ -36,24 +37,26 @@ namespace WinBD
             this.oleDbUpdateCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbDeleteCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbDataAdapter1 = new System.Data.OleDb.OleDbDataAdapter();
-            this.dataSet11 = new WinBD.DataSet1();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SortTextBox = new System.Windows.Forms.TextBox();
             this.FilterTextBox = new System.Windows.Forms.TextBox();
-            this.заказчикиTableAdapter1 = new WinBD.RBProductDataSetTableAdapters.ЗаказчикиTableAdapter();
-            this.rbProductDataSet1 = new WinBD.RBProductDataSet();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.заказчикиTableAdapter1 = new WinBD.RBProductDataSetTableAdapters.ЗаказчикиTableAdapter();
+            this.rbProductDataSet1 = new WinBD.RBProductDataSet();
+            this.rbProductDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.кодПоставщикаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.поставщикDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.адресПоставщикаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.телефонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1)).BeginInit();
+            this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.городDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // oleDbSelectCommand1
@@ -117,11 +120,6 @@ namespace WinBD
                         new System.Data.Common.DataColumnMapping("Телефон", "Телефон")})});
             this.oleDbDataAdapter1.UpdateCommand = this.oleDbUpdateCommand1;
             // 
-            // dataSet11
-            // 
-            this.dataSet11.DataSetName = "DataSet1";
-            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 29);
@@ -176,15 +174,6 @@ namespace WinBD
             this.FilterTextBox.TabIndex = 7;
             this.FilterTextBox.Text = "Город = \'Пушкин\'";
             // 
-            // заказчикиTableAdapter1
-            // 
-            this.заказчикиTableAdapter1.ClearBeforeFill = true;
-            // 
-            // rbProductDataSet1
-            // 
-            this.rbProductDataSet1.DataSetName = "RBProductDataSet";
-            this.rbProductDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(33, 70);
@@ -203,14 +192,31 @@ namespace WinBD
             this.кодПоставщикаDataGridViewTextBoxColumn,
             this.поставщикDataGridViewTextBoxColumn,
             this.адресПоставщикаDataGridViewTextBoxColumn,
-            this.телефонDataGridViewTextBoxColumn});
+            this.телефонDataGridViewTextBoxColumn,
+            this.фамилияDataGridViewTextBoxColumn,
+            this.городDataGridViewTextBoxColumn});
             this.dataGridView1.DataMember = "Заказчики";
-            this.dataGridView1.DataSource = this.dataSet11;
+            this.dataGridView1.DataSource = this.rbProductDataSet1BindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 111);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(454, 150);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // заказчикиTableAdapter1
+            // 
+            this.заказчикиTableAdapter1.ClearBeforeFill = true;
+            // 
+            // rbProductDataSet1
+            // 
+            this.rbProductDataSet1.DataSetName = "RBProductDataSet";
+            this.rbProductDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rbProductDataSet1BindingSource
+            // 
+            this.rbProductDataSet1BindingSource.DataSource = this.rbProductDataSet1;
+            this.rbProductDataSet1BindingSource.Position = 0;
             // 
             // кодПоставщикаDataGridViewTextBoxColumn
             // 
@@ -236,6 +242,18 @@ namespace WinBD
             this.телефонDataGridViewTextBoxColumn.HeaderText = "Телефон";
             this.телефонDataGridViewTextBoxColumn.Name = "телефонDataGridViewTextBoxColumn";
             // 
+            // фамилияDataGridViewTextBoxColumn
+            // 
+            this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
+            this.фамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия";
+            this.фамилияDataGridViewTextBoxColumn.Name = "фамилияDataGridViewTextBoxColumn";
+            // 
+            // городDataGridViewTextBoxColumn
+            // 
+            this.городDataGridViewTextBoxColumn.DataPropertyName = "Город";
+            this.городDataGridViewTextBoxColumn.HeaderText = "Город";
+            this.городDataGridViewTextBoxColumn.Name = "городDataGridViewTextBoxColumn";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,9 +270,9 @@ namespace WinBD
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,20 +286,22 @@ namespace WinBD
         private System.Data.OleDb.OleDbCommand oleDbUpdateCommand1;
         private System.Data.OleDb.OleDbCommand oleDbDeleteCommand1;
         private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter1;
-        private DataSet1 dataSet11;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox SortTextBox;
         private System.Windows.Forms.TextBox FilterTextBox;
-        private RBProductDataSetTableAdapters.ЗаказчикиTableAdapter заказчикиTableAdapter1;
-        private RBProductDataSet rbProductDataSet1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn кодПоставщикаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn поставщикDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn адресПоставщикаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn телефонDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn фамилияDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn городDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource rbProductDataSet1BindingSource;
+        private RBProductDataSet rbProductDataSet1;
+        private RBProductDataSetTableAdapters.ЗаказчикиTableAdapter заказчикиTableAdapter1;
     }
 }

@@ -32,7 +32,7 @@ namespace WinBD
 
         private void button2_Click(object sender, EventArgs e)
         {
-            oleDbDataAdapter1.Update(dataSet11);
+                 oleDbDataAdapter1.Update(rbProductDataSet1);
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -47,6 +47,11 @@ namespace WinBD
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
