@@ -16,7 +16,7 @@ namespace WinBD
         {
             InitializeComponent();
         }
-
+        DataView ЗаказчикиDataview;
         private void button1_Click(object sender, EventArgs e)
         {
             oleDbDataAdapter1.Fill(dataSet11.Заказчики);
@@ -25,6 +25,11 @@ namespace WinBD
         private void button2_Click(object sender, EventArgs e)
         {
             oleDbDataAdapter1.Update(dataSet11);
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
