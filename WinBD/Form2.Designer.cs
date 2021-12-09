@@ -48,8 +48,11 @@ namespace WinBD
             this.label2 = new System.Windows.Forms.Label();
             this.SortTextBox = new System.Windows.Forms.TextBox();
             this.FilterTextBox = new System.Windows.Forms.TextBox();
+            this.заказчикиTableAdapter1 = new WinBD.RBProductDataSetTableAdapters.ЗаказчикиTableAdapter();
+            this.rbProductDataSet1 = new WinBD.RBProductDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // oleDbSelectCommand1
@@ -213,6 +216,15 @@ namespace WinBD
             this.FilterTextBox.TabIndex = 7;
             this.FilterTextBox.Text = "Город = \'Пушкин\'";
             // 
+            // заказчикиTableAdapter1
+            // 
+            this.заказчикиTableAdapter1.ClearBeforeFill = true;
+            // 
+            // rbProductDataSet1
+            // 
+            this.rbProductDataSet1.DataSetName = "RBProductDataSet";
+            this.rbProductDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,6 +241,7 @@ namespace WinBD
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,5 +267,7 @@ namespace WinBD
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox SortTextBox;
         private System.Windows.Forms.TextBox FilterTextBox;
+        private RBProductDataSetTableAdapters.ЗаказчикиTableAdapter заказчикиTableAdapter1;
+        private RBProductDataSet rbProductDataSet1;
     }
 }
