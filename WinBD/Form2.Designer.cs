@@ -60,6 +60,8 @@ namespace WinBD
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.Previousbutton = new System.Windows.Forms.Button();
+            this.Nextbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1BindingSource)).BeginInit();
@@ -140,7 +142,7 @@ namespace WinBD
             // 
             this.button2.Location = new System.Drawing.Point(4, 53);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 23);
+            this.button2.Size = new System.Drawing.Size(84, 23);
             this.button2.TabIndex = 3;
             this.button2.Text = "Update Data";
             this.button2.UseVisualStyleBackColor = true;
@@ -149,7 +151,7 @@ namespace WinBD
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(163, 66);
+            this.label1.Location = new System.Drawing.Point(163, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 4;
@@ -158,7 +160,7 @@ namespace WinBD
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(127, 9);
+            this.label2.Location = new System.Drawing.Point(8, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 5;
@@ -166,7 +168,7 @@ namespace WinBD
             // 
             // SortTextBox
             // 
-            this.SortTextBox.Location = new System.Drawing.Point(163, 85);
+            this.SortTextBox.Location = new System.Drawing.Point(227, 88);
             this.SortTextBox.Name = "SortTextBox";
             this.SortTextBox.Size = new System.Drawing.Size(100, 20);
             this.SortTextBox.TabIndex = 6;
@@ -174,7 +176,7 @@ namespace WinBD
             // 
             // FilterTextBox
             // 
-            this.FilterTextBox.Location = new System.Drawing.Point(130, 27);
+            this.FilterTextBox.Location = new System.Drawing.Point(85, 5);
             this.FilterTextBox.Name = "FilterTextBox";
             this.FilterTextBox.Size = new System.Drawing.Size(100, 20);
             this.FilterTextBox.TabIndex = 7;
@@ -262,21 +264,21 @@ namespace WinBD
             // 
             // FamtextBox
             // 
-            this.FamtextBox.Location = new System.Drawing.Point(354, 12);
+            this.FamtextBox.Location = new System.Drawing.Point(354, 5);
             this.FamtextBox.Name = "FamtextBox";
             this.FamtextBox.Size = new System.Drawing.Size(100, 20);
             this.FamtextBox.TabIndex = 10;
             // 
             // NametextBox
             // 
-            this.NametextBox.Location = new System.Drawing.Point(354, 38);
+            this.NametextBox.Location = new System.Drawing.Point(354, 31);
             this.NametextBox.Name = "NametextBox";
             this.NametextBox.Size = new System.Drawing.Size(100, 20);
             this.NametextBox.TabIndex = 11;
             // 
             // SectiontextBox
             // 
-            this.SectiontextBox.Location = new System.Drawing.Point(354, 66);
+            this.SectiontextBox.Location = new System.Drawing.Point(354, 57);
             this.SectiontextBox.Name = "SectiontextBox";
             this.SectiontextBox.Size = new System.Drawing.Size(100, 20);
             this.SectiontextBox.TabIndex = 12;
@@ -284,7 +286,7 @@ namespace WinBD
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(280, 15);
+            this.label3.Location = new System.Drawing.Point(292, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 13;
@@ -293,7 +295,7 @@ namespace WinBD
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(280, 41);
+            this.label4.Location = new System.Drawing.Point(319, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 14;
@@ -302,17 +304,37 @@ namespace WinBD
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(280, 69);
+            this.label5.Location = new System.Drawing.Point(310, 60);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 15;
             this.label5.Text = "Отдел";
+            // 
+            // Previousbutton
+            // 
+            this.Previousbutton.Location = new System.Drawing.Point(202, 28);
+            this.Previousbutton.Name = "Previousbutton";
+            this.Previousbutton.Size = new System.Drawing.Size(75, 23);
+            this.Previousbutton.TabIndex = 16;
+            this.Previousbutton.Text = "Previous";
+            this.Previousbutton.UseVisualStyleBackColor = true;
+            // 
+            // Nextbutton
+            // 
+            this.Nextbutton.Location = new System.Drawing.Point(202, 58);
+            this.Nextbutton.Name = "Nextbutton";
+            this.Nextbutton.Size = new System.Drawing.Size(75, 23);
+            this.Nextbutton.TabIndex = 17;
+            this.Nextbutton.Text = "Next";
+            this.Nextbutton.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(454, 261);
+            this.Controls.Add(this.Nextbutton);
+            this.Controls.Add(this.Previousbutton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -369,5 +391,7 @@ namespace WinBD
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button Previousbutton;
+        private System.Windows.Forms.Button Nextbutton;
     }
 }
