@@ -45,15 +45,15 @@ namespace WinBD
             this.FilterTextBox = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.заказчикиTableAdapter1 = new WinBD.RBProductDataSetTableAdapters.ЗаказчикиTableAdapter();
-            this.rbProductDataSet1 = new WinBD.RBProductDataSet();
-            this.rbProductDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.кодПоставщикаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.поставщикDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.адресПоставщикаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.телефонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.городDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rbProductDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rbProductDataSet1 = new WinBD.RBProductDataSet();
+            this.заказчикиTableAdapter1 = new WinBD.RBProductDataSetTableAdapters.ЗаказчикиTableAdapter();
             this.FamtextBox = new System.Windows.Forms.TextBox();
             this.NametextBox = new System.Windows.Forms.TextBox();
             this.SectiontextBox = new System.Windows.Forms.TextBox();
@@ -63,8 +63,8 @@ namespace WinBD
             this.Previousbutton = new System.Windows.Forms.Button();
             this.Nextbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // oleDbSelectCommand1
@@ -130,7 +130,7 @@ namespace WinBD
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(4, 24);
+            this.button1.Location = new System.Drawing.Point(12, 9);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -140,7 +140,7 @@ namespace WinBD
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(4, 53);
+            this.button2.Location = new System.Drawing.Point(12, 44);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(84, 23);
             this.button2.TabIndex = 3;
@@ -151,7 +151,7 @@ namespace WinBD
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(163, 88);
+            this.label1.Location = new System.Drawing.Point(154, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 4;
@@ -160,7 +160,7 @@ namespace WinBD
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 8);
+            this.label2.Location = new System.Drawing.Point(150, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 5;
@@ -168,7 +168,7 @@ namespace WinBD
             // 
             // SortTextBox
             // 
-            this.SortTextBox.Location = new System.Drawing.Point(227, 88);
+            this.SortTextBox.Location = new System.Drawing.Point(227, 41);
             this.SortTextBox.Name = "SortTextBox";
             this.SortTextBox.Size = new System.Drawing.Size(100, 20);
             this.SortTextBox.TabIndex = 6;
@@ -176,7 +176,7 @@ namespace WinBD
             // 
             // FilterTextBox
             // 
-            this.FilterTextBox.Location = new System.Drawing.Point(85, 5);
+            this.FilterTextBox.Location = new System.Drawing.Point(227, 5);
             this.FilterTextBox.Name = "FilterTextBox";
             this.FilterTextBox.Size = new System.Drawing.Size(100, 20);
             this.FilterTextBox.TabIndex = 7;
@@ -184,7 +184,7 @@ namespace WinBD
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(4, 82);
+            this.button3.Location = new System.Drawing.Point(12, 82);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(153, 23);
             this.button3.TabIndex = 8;
@@ -208,23 +208,9 @@ namespace WinBD
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 111);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(454, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(648, 150);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // заказчикиTableAdapter1
-            // 
-            this.заказчикиTableAdapter1.ClearBeforeFill = true;
-            // 
-            // rbProductDataSet1
-            // 
-            this.rbProductDataSet1.DataSetName = "RBProductDataSet";
-            this.rbProductDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rbProductDataSet1BindingSource
-            // 
-            this.rbProductDataSet1BindingSource.DataSource = this.rbProductDataSet1;
-            this.rbProductDataSet1BindingSource.Position = 0;
             // 
             // кодПоставщикаDataGridViewTextBoxColumn
             // 
@@ -262,23 +248,37 @@ namespace WinBD
             this.городDataGridViewTextBoxColumn.HeaderText = "Город";
             this.городDataGridViewTextBoxColumn.Name = "городDataGridViewTextBoxColumn";
             // 
+            // rbProductDataSet1BindingSource
+            // 
+            this.rbProductDataSet1BindingSource.DataSource = this.rbProductDataSet1;
+            this.rbProductDataSet1BindingSource.Position = 0;
+            // 
+            // rbProductDataSet1
+            // 
+            this.rbProductDataSet1.DataSetName = "RBProductDataSet";
+            this.rbProductDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // заказчикиTableAdapter1
+            // 
+            this.заказчикиTableAdapter1.ClearBeforeFill = true;
+            // 
             // FamtextBox
             // 
-            this.FamtextBox.Location = new System.Drawing.Point(354, 5);
+            this.FamtextBox.Location = new System.Drawing.Point(536, 2);
             this.FamtextBox.Name = "FamtextBox";
             this.FamtextBox.Size = new System.Drawing.Size(100, 20);
             this.FamtextBox.TabIndex = 10;
             // 
             // NametextBox
             // 
-            this.NametextBox.Location = new System.Drawing.Point(354, 31);
+            this.NametextBox.Location = new System.Drawing.Point(536, 30);
             this.NametextBox.Name = "NametextBox";
             this.NametextBox.Size = new System.Drawing.Size(100, 20);
             this.NametextBox.TabIndex = 11;
             // 
             // SectiontextBox
             // 
-            this.SectiontextBox.Location = new System.Drawing.Point(354, 57);
+            this.SectiontextBox.Location = new System.Drawing.Point(536, 57);
             this.SectiontextBox.Name = "SectiontextBox";
             this.SectiontextBox.Size = new System.Drawing.Size(100, 20);
             this.SectiontextBox.TabIndex = 12;
@@ -286,7 +286,7 @@ namespace WinBD
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(292, 9);
+            this.label3.Location = new System.Drawing.Point(474, 5);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 13;
@@ -295,7 +295,7 @@ namespace WinBD
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(319, 34);
+            this.label4.Location = new System.Drawing.Point(501, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 14;
@@ -304,7 +304,7 @@ namespace WinBD
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(310, 60);
+            this.label5.Location = new System.Drawing.Point(492, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 15;
@@ -312,27 +312,29 @@ namespace WinBD
             // 
             // Previousbutton
             // 
-            this.Previousbutton.Location = new System.Drawing.Point(202, 28);
+            this.Previousbutton.Location = new System.Drawing.Point(366, 12);
             this.Previousbutton.Name = "Previousbutton";
             this.Previousbutton.Size = new System.Drawing.Size(75, 23);
             this.Previousbutton.TabIndex = 16;
             this.Previousbutton.Text = "Previous";
             this.Previousbutton.UseVisualStyleBackColor = true;
+            this.Previousbutton.Click += new System.EventHandler(this.Previousbutton_Click);
             // 
             // Nextbutton
             // 
-            this.Nextbutton.Location = new System.Drawing.Point(202, 58);
+            this.Nextbutton.Location = new System.Drawing.Point(366, 41);
             this.Nextbutton.Name = "Nextbutton";
             this.Nextbutton.Size = new System.Drawing.Size(75, 23);
             this.Nextbutton.TabIndex = 17;
             this.Nextbutton.Text = "Next";
             this.Nextbutton.UseVisualStyleBackColor = true;
+            this.Nextbutton.Click += new System.EventHandler(this.Nextbutton_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 261);
+            this.ClientSize = new System.Drawing.Size(648, 261);
             this.Controls.Add(this.Nextbutton);
             this.Controls.Add(this.Previousbutton);
             this.Controls.Add(this.label5);
@@ -353,8 +355,8 @@ namespace WinBD
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
