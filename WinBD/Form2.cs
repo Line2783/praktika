@@ -35,9 +35,17 @@ namespace WinBD
                  oleDbDataAdapter1.Update(rbProductDataSet1);
         }
 
+        private BindingSource sotrBindingSourse;
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            // Загрузка таблицы данными:
+            заказчикиTableAdapter1.Fill(rbProductDataSet1.Заказчики);
+            // Создание BindingSource для таблицы Заказчики:
+            sotrBindingSourse = new BindingSource(rbProductDataSet1, "Заказчики");
+            // Настройка связывания для элементов TextBox:
+            FamtextBox.DataBindings.Add("Text", sotrBindingSourse, "Поставщик");
+            NametextBox.DataBindings.Add("Text", sotrBindingSourse, "Телефон");
+            SectiontextBox.DataBindings.Add("Text", sotrBindingSourse, "Адрес поставщика");
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -54,6 +62,16 @@ namespace WinBD
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Previousbutton_Click(object sender, EventArgs e)
+        {
+            sotrBindingSourse.MovePrevious();
+        }
+
+        private void Nextbutton_Click(object sender, EventArgs e)
+        {
+            sotrBindingSourse.MoveNext();
         }
     }
 }
