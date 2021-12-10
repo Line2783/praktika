@@ -49,17 +49,26 @@ namespace WinDataSourcesWizard
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.заказчикиBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.заказчикиDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.товарыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.товарыTableAdapter = new WinDataSourcesWizard.RBProductDataSetTableAdapters.ТоварыTableAdapter();
+            this.товарыDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.rBProductDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.заказчикиBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.заказчикиBindingNavigator)).BeginInit();
             this.заказчикиBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.заказчикиDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.товарыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.товарыDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // rBProductDataSet
@@ -81,7 +90,7 @@ namespace WinDataSourcesWizard
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.UpdateOrder = WinDataSourcesWizard.RBProductDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.ЗаказчикиTableAdapter = this.заказчикиTableAdapter;
-            this.tableAdapterManager.ТоварыTableAdapter = null;
+            this.tableAdapterManager.ТоварыTableAdapter = this.товарыTableAdapter;
             // 
             // заказчикиBindingNavigator
             // 
@@ -224,35 +233,53 @@ namespace WinDataSourcesWizard
             this.заказчикиDataGridView.Size = new System.Drawing.Size(300, 220);
             this.заказчикиDataGridView.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn1
+            // товарыBindingSource
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Код поставщика";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Код поставщика";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.товарыBindingSource.DataMember = "Товары";
+            this.товарыBindingSource.DataSource = this.rBProductDataSet;
             // 
-            // dataGridViewTextBoxColumn2
+            // товарыTableAdapter
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Поставщик";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Поставщик";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.товарыTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // товарыDataGridView
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Адрес поставщика";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Адрес поставщика";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.товарыDataGridView.AutoGenerateColumns = false;
+            this.товарыDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.товарыDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.товарыDataGridView.DataSource = this.товарыBindingSource;
+            this.товарыDataGridView.Location = new System.Drawing.Point(31, 134);
+            this.товарыDataGridView.Name = "товарыDataGridView";
+            this.товарыDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.товарыDataGridView.TabIndex = 2;
             // 
-            // dataGridViewTextBoxColumn4
+            // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Телефон";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Телефон";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Код продукта";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Код продукта";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // dataGridViewTextBoxColumn5
+            // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Фамилия";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Фамилия";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Наименование";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Наименование";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Цена, $";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Цена, $";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Код поставщика";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Код поставщика";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -260,11 +287,42 @@ namespace WinDataSourcesWizard
             this.dataGridViewTextBoxColumn6.HeaderText = "Город";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Фамилия";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Фамилия";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Телефон";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Телефон";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Адрес поставщика";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Адрес поставщика";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Поставщик";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Поставщик";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Код поставщика";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Код поставщика";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.товарыDataGridView);
             this.Controls.Add(this.заказчикиDataGridView);
             this.Controls.Add(this.заказчикиBindingNavigator);
             this.Name = "Form1";
@@ -276,6 +334,8 @@ namespace WinDataSourcesWizard
             this.заказчикиBindingNavigator.ResumeLayout(false);
             this.заказчикиBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.заказчикиDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.товарыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.товарыDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,6 +361,13 @@ namespace WinDataSourcesWizard
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton заказчикиBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView заказчикиDataGridView;
+        private RBProductDataSetTableAdapters.ТоварыTableAdapter товарыTableAdapter;
+        private System.Windows.Forms.BindingSource товарыBindingSource;
+        private System.Windows.Forms.DataGridView товарыDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
